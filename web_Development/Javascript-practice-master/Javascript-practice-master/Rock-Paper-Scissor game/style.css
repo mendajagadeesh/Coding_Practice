@@ -1,0 +1,56 @@
+#myContainer {
+    margin: auto;
+    width: 50%;
+    display: flex;
+}
+
+#myBtn {
+    font-size: 4rem;
+    background-color: powderblue;
+    border: 2px solid white;
+    padding: 10px 15px;
+    margin: 5px;
+    height: 120px;
+    text-align: center;
+    border-radius: 60px;
+}
+
+#myData {
+    font-size: 2rem;
+    padding: 10px 15px;
+    margin: 5px;
+    height: 120px;
+    text-align: center;
+    border-radius: 60px;
+}
+
+#choosedData {
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.choosedData {
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.greentxt {
+    font-size: 50px;
+    color: rgb(3, 193, 3);
+}
+
+.redtxt {
+    font-size: 50px;
+    color: rgb(227, 13, 13);
+}
+
+.bluetxt {
+    font-size: 50px;
+    color: rgb(33, 120, 234);
+}
+
+.score {
+    font-size: 50px;
+}

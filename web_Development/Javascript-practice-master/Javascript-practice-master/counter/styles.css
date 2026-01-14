@@ -1,0 +1,23 @@
+#textcontent {
+    display: block;
+    text-align: center;
+    font-size: 10em;
+}
+
+.containerBtn {
+    text-align: center;
+}
+
+.buttons {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: rgb(103, 103, 231);
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.25s;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    background-color: blue;
+}

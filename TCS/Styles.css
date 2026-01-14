@@ -1,0 +1,31 @@
+body{
+    background-color: powderblue;
+}
+
+form{
+    display: block;
+    border: 2px light grey;
+    background-color: rgb(233, 217, 217);
+    align-items: center;
+    border-radius: 10px;
+    width:30%;
+    text-align: center;
+    margin-left: 500px;
+
+}
+
+.container{
+     text-align: center;
+}
+input{
+    border:1px solid grey;
+    border:none;
+    padding: 5px;
+    margin: 5px;
+}
+
+button{
+    padding:5px;
+    border:2px solid rgb(220, 244, 179);
+    margin-bottom:5px;
+}

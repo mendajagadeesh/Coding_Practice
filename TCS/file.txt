@@ -1,0 +1,194 @@
+//polymorphism
+
+
+
+abstract class Shapes{
+    int ShapeId;
+    String color;
+    void shape(){
+        System.out.println("This is a shape class contains ShapeId and color(parent class)");
+    }
+
+    Shapes(int ShapeId,String color){
+        this.ShapeId=ShapeId;
+        this.color=color;
+    }
+}
+class Circle extends Shapes{
+        float radius;
+    Circle(int ShapeId,String color,float radius){
+        super(ShapeId,color);
+        this.radius=radius;
+    }
+    
+    @Override
+    public void shape(){
+         System.out.println("_________________________________________________________________________________________________");
+        super.shape();
+        System.out.println("drawing a circle->"+"shape id :"+ShapeId+"  color:"+color+"  radius:"+radius);
+         System.out.println("_________________________________________________________________________________________________");
+    }
+}
+
+class Rectangle extends Shapes{
+    float width;
+    float height;
+    
+    Rectangle(int ShapeId, String color,float width,float height) {
+        super(ShapeId, color);
+        this.width=width;
+        this.height=height;
+    }
+    @Override
+    public void shape(){
+        System.out.println("_________________________________________________________________________________________________");
+        super.shape();
+        System.out.println("drawing a Rectangle->"+"shape id :"+ShapeId+"  color: "+color+"  width: "+width+ " height: "+ height);
+         System.out.println("_________________________________________________________________________________________________");
+    }
+}
+public class Polymorphism {
+
+    public static void main(String[] args) {
+
+        Circle c=new Circle(200, "black", 5);
+        Rectangle r=new Rectangle(300, "grey", 20, 10);
+        
+        c.shape();
+        r.shape();
+       }
+}
+
+
+
+//oops java
+
+
+import java.util.ArrayList;
+
+class Employee{
+    int empid;
+    String empname;
+    String position;
+    float salary;
+    float perm_rating;
+    public Employee(int empid,String empname,String position,float salary,float perm_rating){
+          this.empid=empid;
+          this.empname=empname;
+          this.position=position;
+          this.salary=salary;
+          this.perm_rating=perm_rating;
+    }
+
+    void display(){
+        System.out.println("Employee Id : "+empid+"\n"+
+        "Employee Name : "+empname+"\n"+
+        "Employee position : "+position+"\n"+
+        "Employee salary : "+salary+"\n"+
+        "Employee permformance rating: "+perm_rating+"\n");
+    }
+
+    static void Updation(ArrayList<Employee> E,float salary,float perm_rating){
+        for(Employee e: E){
+            if(e.empid==101){
+                    e.salary=salary;
+                    e.perm_rating=perm_rating;
+              }
+            }
+        }
+        
+
+
+}
+
+public class Oops1 {
+    public static void main(String[] args) {
+        ArrayList<Employee> list=new ArrayList<>();
+        list.add(new Employee(101, "Jagadeesh", "Junoir Developer", 30000, 4.5f));
+        list.add(new Employee(102, "Naveen", "Junoir Developer", 30000, 4.5f));
+        list.add(new Employee(103, "karthik", "Junoir Developer", 30000, 4.5f));
+        list.add(new Employee(104, "vijay", "Junoir Developer", 30000, 4.5f));
+        list.add(new Employee(105, "vivek", "Junoir Developer", 30000, 4.5f));
+
+        Employee.Updation(list,40000f,5.0f);
+        for(Employee e:list){
+            e.display();
+        }
+    }
+}
+
+
+
+//files handling
+
+
+
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+class Book{
+int bookid;
+String title;
+String author;
+Book(int bookid,String title,String author){
+    this.bookid=bookid;
+    this.title=title;
+    this.author=author;
+}
+static ArrayList<Book> list=new ArrayList<>();
+static void add(Book b){
+    list.add(b);
+}public String toString(){
+    return "Book id : "+bookid+" Title: "+author+ " Author : "+author;
+}
+
+static void Savefiles() throws IOException{
+    File f=new File("File1.csv");
+    FileWriter f1=new FileWriter("File2.csv");
+    PrintWriter w=new PrintWriter(f1);
+    for(Book b1:list){
+        w.println(b1.toString());
+    }
+    w.flush();
+    w.close();
+}
+static void loadFile() throws Exception{
+    BufferedReader br=new BufferedReader(new FileReader("File2.csv"));
+    String var=br.readLine();
+    while(var!=null){
+        System.out.println(var);
+        var=br.readLine();
+    }
+    br.close();
+}
+    
+}
+
+public class Exception_Handling {
+    public static void main(String[] args)throws Exception {
+        List<Book> l1=new ArrayList<>();
+         Book book1=new Book(101, "java", "naveenk9i");
+         Book book2=new Book(101, "java", "naveenk9i");
+         Book book3=new Book(101, "java", "naveenk9i");
+         Book book4=new Book(101, "java", "naveenk9i");
+         Book book5=new Book(101, "java", "naveenk9i");
+        Book.add(book1);
+        Book.add(book2);
+        Book.add(book3);
+        Book.add(book4);
+        Book.add(book5);
+
+
+        Book.Savefiles();
+        Book.loadFile();
+    }
+}
+
