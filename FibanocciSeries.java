@@ -4,7 +4,7 @@ public class FibanocciSeries {
         int a=0,b=1;
         int c;
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the size ");
+        System.out.print("Enter the size ");
         int n=sc.nextInt();
         System.out.println(a);
         System.out.println(b);
