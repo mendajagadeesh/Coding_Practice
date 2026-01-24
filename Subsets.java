@@ -84,7 +84,7 @@ public class Subsets {
     //     ArrayList<String> ans=new ArrayList<>();
     //     subsetsusingarraylist("", "abc",ans);
     //     System.out.println(ans);
-    //     permutations("", "abc");
+     //   permutations("", "abc");
     //     System.out.println(permutationsusingArrayList("", "abc", new ArrayList<>()));  
     // 
     }
