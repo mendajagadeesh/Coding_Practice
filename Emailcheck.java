@@ -8,7 +8,7 @@ public class Emailcheck {
         else{
             for(int i=0;i<mail.length();i++){
                 if(mail.charAt(i)=='@'){
-                   return "Valid email domain name -"+ mail.substring(i);//returns domain name
+                   return "Valid email domain name -> "+ mail.substring(i);//returns domain name
                 }
             }
             return "invalid email";
