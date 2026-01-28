@@ -1,5 +1,4 @@
 import java.util.Arrays;
-
 class Node{
     int val;
     Node next;
